@@ -49,18 +49,18 @@ msgstr "Veuillez enlever le produit suivant : "
 #: code:addons/haxs_eqp_sale/models/sale_check.py:0
 #, python-format
 msgid "You are not authorized to cancel a sale order"
-msgstr "Vous n'êtes pas authorisé à annuler une commande."
+msgstr "Vous n'êtes pas autorisé à annuler une commande."
 
 #. module: haxs_eqp_sale
 #. odoo-python
 #: code:addons/haxs_eqp_sale/models/sale_check.py:0
 #, python-format
 msgid "You are not authorized to confirm a sale order"
-msgstr "Vous n'êtes pas authorisé a confirmer une commande."
+msgstr "Vous n'êtes pas autorisé a confirmer une commande."
 
 #. module: haxs_eqp_sale
 #. odoo-python
 #: code:addons/haxs_eqp_sale/models/sale_check.py:0
 #, python-format
 msgid "You are not authorized to create a sale order"
-msgstr "Vous n'êtes pas authorisé à créer un devis."
+msgstr "Vous n'êtes pas autorisé à créer un devis."
