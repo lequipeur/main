@@ -7,6 +7,12 @@ class SaleOrderCheck(models.Model):
     _inherit = 'sale.order'
     
     def action_confirm(self):
+        message = _("You are not authorized to confirm a sale order")
+        group_id = self.env.ref("haxs_security_groups.sales_group_user").id
+        self._check_permission(group_id, message)
+        group_id = self.env.ref("haxs_security_groups.manager_group_manager").id
+        self._check_permission(group_id, message)
+        
         self._check_product("00PAC")
         self._check_delivery_email()
         return super(SaleOrderCheck, self).action_confirm()

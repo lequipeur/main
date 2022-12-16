@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* haxs_sale_price
+# 	* haxs_eqp_sale
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e-20221202\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-15 17:18+0000\n"
-"PO-Revision-Date: 2022-12-15 17:18+0000\n"
+"POT-Creation-Date: 2022-12-16 14:49+0000\n"
+"PO-Revision-Date: 2022-12-16 14:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,56 +15,52 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: haxs_sale_price
-#: model:ir.model.fields,field_description:haxs_sale_price.field_sale_order__amount_already_invoiced
-msgid "Already invoiced"
-msgstr "Déjà facturé"
+#. module: haxs_eqp_sale
+#: model_terms:ir.ui.view,arch_db:haxs_eqp_sale.sale_order_view_form_inherit_sale_stock_update
+msgid "Delivery date"
+msgstr "Date de livraison"
 
-#. module: haxs_sale_price
-#: model:ir.model,name:haxs_sale_price.model_product_product
-msgid "Extra Price"
-msgstr "Prix supp."
+#. module: haxs_eqp_sale
+#: model_terms:ir.ui.view,arch_db:haxs_eqp_sale.sale_order_view_form_inherit_sale_stock_update
+msgid "Expected date"
+msgstr "Date espéré"
 
-#. module: haxs_sale_price
-#: model:ir.model.fields,field_description:haxs_sale_price.field_product_product__extra_price
-msgid "Extra price"
-msgstr "Prix supp."
-
-#. module: haxs_sale_price
-#: model:ir.model.fields,field_description:haxs_sale_price.field_sale_order__global_discount
-msgid "Global Discount"
-msgstr "Remise global"
-
-#. module: haxs_sale_price
-#: model:ir.model,name:haxs_sale_price.model_sale_order
+#. module: haxs_eqp_sale
+#: model:ir.model,name:haxs_eqp_sale.model_sale_order
 msgid "Invoice field"
 msgstr ""
 
-#. module: haxs_sale_price
-#: model:ir.model,name:haxs_sale_price.model_product_template
-msgid "Sale Price"
-msgstr "Prix de Vente"
-
-#. module: haxs_sale_price
-#: model:ir.model.fields,field_description:haxs_sale_price.field_sale_order__amount_to_invoice
-msgid "To invoice"
-msgstr "A facturer"
-
-#. module: haxs_sale_price
-#: model:ir.model.fields,field_description:haxs_sale_price.field_sale_order__amount_waiting_delivery
-msgid "Waiting delivery"
-msgstr "En attente de livraison"
-
-#. module: haxs_sale_price
+#. module: haxs_eqp_sale
 #. odoo-python
-#: code:addons/haxs_sale_price/models/extra_price.py:0
+#: code:addons/haxs_eqp_sale/models/sale_check.py:0
 #, python-format
-msgid "You are not authorized to change the extra price"
-msgstr "Vous n'êtes pas autorisé à modifier le prix supp."
+msgid "Please provide a delivery email."
+msgstr "Veuillez renseigner un email de livraison."
 
-#. module: haxs_sale_price
+#. module: haxs_eqp_sale
 #. odoo-python
-#: code:addons/haxs_sale_price/models/sale_price.py:0
+#: code:addons/haxs_eqp_sale/models/sale_check.py:0
 #, python-format
-msgid "You are not authorized to change the sale price"
-msgstr "Vous n'êtes pas autorisé à modifier le prix de vente"
+msgid "Please remove the following product : "
+msgstr "Veuillez enlever le produit suivant : "
+
+#. module: haxs_eqp_sale
+#. odoo-python
+#: code:addons/haxs_eqp_sale/models/sale_check.py:0
+#, python-format
+msgid "You are not authorized to cancel a sale order"
+msgstr "Vous n'êtes pas autorisé à annuler une commande."
+
+#. module: haxs_eqp_sale
+#. odoo-python
+#: code:addons/haxs_eqp_sale/models/sale_check.py:0
+#, python-format
+msgid "You are not authorized to confirm a sale order"
+msgstr "Vous n'êtes pas autorisé a confirmer une commande."
+
+#. module: haxs_eqp_sale
+#. odoo-python
+#: code:addons/haxs_eqp_sale/models/sale_check.py:0
+#, python-format
+msgid "You are not authorized to create a sale order"
+msgstr "Vous n'êtes pas autorisé à créer un devis."
