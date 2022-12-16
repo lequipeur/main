@@ -8,10 +8,9 @@ class SaleOrderCheck(models.Model):
     
     def action_confirm(self):
         message = _("You are not authorized to confirm a sale order")
-        group_id = self.env.ref("haxs_security_groups.sales_group_user").id
-        self._check_permission(group_id, message)
-        group_id = self.env.ref("haxs_security_groups.manager_group_manager").id
-        self._check_permission(group_id, message)
+        groups_id = [self.env.ref("haxs_security_groups.sales_group_user").id]
+        groups_id.append(self.env.ref("haxs_security_groups.manager_group_manager").id)
+        self._check_permission(groups_id, message)
         
         self._check_product("00PAC")
         self._check_delivery_email()
@@ -33,17 +32,21 @@ class SaleOrderCheck(models.Model):
             if not sale.partner_shipping_id.email :
                 raise ValidationError(_("Please provide a delivery email."))
 
-    def _check_permission(self, group_id, message):
+    def _check_permission(self, groups_id, message):
         # for the default value on create
         if self.env.context.get("disable_check", False):
             return True
-        if group_id not in self.env.user.groups_id.ids:
+        is_allowed = False
+        for group_id in groups_id:
+            if group_id in self.env.user.groups_id.ids:
+                is_allowed = True
+        if not is_allowed:
             raise ValidationError(message)
 
     # on create just call the super with the context to disable the stage change, to allow it as "default" value
     @api.model_create_multi
     def create(self, values):
-        group_id = self.env.ref("haxs_security_groups.sales_group_user").id
+        groups_id = [self.env.ref("haxs_security_groups.sales_group_user").id]
         message = _("You are not authorized to create a sale order")
-        self._check_permission(group_id, message)
+        self._check_permission(groups_id, message)
         return super(SaleOrderCheck, self).create(values)
