@@ -42,7 +42,7 @@
                 </xpath>
 
                 <xpath expr="//field[@name='date_order']" position="after">
-   0                 <!--<field name="commitment_date" attrs="{'required':[['state','=','sale']]}"/>-->
+                    <!--<field name="commitment_date" attrs="{'required':[['state','=','sale']]}"/>-->
                     <field name="commitment_date" string="Delivery date" widget="date"/>
                     <field name="expected_date" string="Expected date" widget="date" class="text-muted" attrs="{'invisible': [('effective_date', '!=', False), ('commitment_date', '!=', False)]}"/>
                     <field name="effective_date" class="text-muted" widget="date" attrs="{'invisible': [('effective_date', '=', False)]}"/>
