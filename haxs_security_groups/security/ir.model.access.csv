@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+admin_marketing,Administrator / Marketing,model_security_groups,haxs_security_groups.marketing_group_manager,1,1,1,1
+user_marketing,User / Marketing,model_security_groups,haxs_security_groups.marketing_group_user,1,0,0,0
+admin_sales,Administrator / Sales,model_security_groups,haxs_security_groups.sales_group_manager,1,1,1,1
+user_sales,User / Sales,model_security_groups,haxs_security_groups.sales_group_user,1,0,0,0
+admin_inventory,Administrator / Inventory,model_security_groups,haxs_security_groups.inventory_group_manager,1,1,1,1
+user_inventory,User / Inventory,model_security_groups,haxs_security_groups.inventory_group_user,1,0,0,0
+admin_accounting,Administrator / Accounting,model_security_groups,haxs_security_groups.accounting_group_manager,1,1,1,1
+user_accounting,User / Accounting,model_security_groups,haxs_security_groups.accounting_group_user,1,0,0,0
+admin_purchase,Administrator / Purchase,model_security_groups,haxs_security_groups.purchase_group_manager,1,1,1,1
+user_purchase,User / Purchase,model_security_groups,haxs_security_groups.purchase_group_user,1,0,0,0
+admin_product,Administrator / Product,model_security_groups,haxs_security_groups.product_group_manager,1,1,1,1
+user_product,User / Product,model_security_groups,haxs_security_groups.product_group_user,1,0,0,0
+admin_manager,Manager,model_security_groups,haxs_security_groups.manager_group_manager,1,1,1,1
