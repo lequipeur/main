@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_normal_form_extra_price_view" model="ir.ui.view">
+            <field name="name">product.normal.form.extra.price.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='pricing']" position="after">
+                    <field name="extra_price" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_product_extra_price_tree_view" model="ir.ui.view">
+            <field name="name">product.product.extra.price.tree.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lst_price']" position="after">
+                    <field name="extra_price"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_product_extra_price_easy_edit_view" model="ir.ui.view">
+            <field name="name">product.product.extra.price.easy.edit.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='standard_price']" position="before">
+                    <field name="extra_price" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

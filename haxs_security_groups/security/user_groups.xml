@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Marketing group -->
+        <record model="ir.module.category" id="marketing_module_management">
+            <field name="name">Marketing group</field>
+            <field name="description">User access level for Marketing</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="marketing_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.marketing_module_management"></field>
+        </record>
+        <record id="marketing_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.marketing_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.marketing_module_management"></field>
+        </record>
+        <!-- Sales group -->
+        <record model="ir.module.category" id="sales_module_management">
+            <field name="name">Sales group</field>
+            <field name="description">User access level for Sales</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="sales_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.sales_module_management"></field>
+        </record>
+        <record id="sales_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.sales_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.sales_module_management"></field>
+        </record>
+        <!-- Inventory group -->
+        <record model="ir.module.category" id="inventory_module_management">
+            <field name="name">Inventory group</field>
+            <field name="description">User access level for Inventory</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="inventory_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.inventory_module_management"></field>
+        </record>
+        <record id="inventory_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.inventory_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.inventory_module_management"></field>
+        </record>
+        <!-- Accounting group -->
+        <record model="ir.module.category" id="accounting_module_management">
+            <field name="name">Accounting group</field>
+            <field name="description">User access level for Accounting</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="accounting_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.accounting_module_management"></field>
+        </record>
+        <record id="accounting_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.accounting_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.accounting_module_management"></field>
+        </record>
+        <!-- Purchase group -->
+        <record model="ir.module.category" id="purchase_module_management">
+            <field name="name">Purchase group</field>
+            <field name="description">User access level for Purchase</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="purchase_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.purchase_module_management"></field>
+        </record>
+        <record id="purchase_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.purchase_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.purchase_module_management"></field>
+        </record>
+        <!-- Product group -->
+        <record model="ir.module.category" id="product_module_management">
+            <field name="name">Product group</field>
+            <field name="description">User access level for Product</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="product_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="haxs_security_groups.product_module_management"></field>
+        </record>
+        <record id="product_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('haxs_security_groups.product_group_user'))]"></field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.product_module_management"></field>
+        </record>
+        <!-- Manager group -->
+        <record model="ir.module.category" id="manager_module_management">
+            <field name="name">Manager group</field>
+            <field name="description">User access level for Manager</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="manager_group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"></field> -->
+            <field name="category_id" ref="haxs_security_groups.manager_module_management"></field>
+        </record>
+    </data>
+</odoo>

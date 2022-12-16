@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Chatter Position",
+    'name': "Eqp Sale",
 
     'summary': """
-        Move chatter to bottom""",
+        EQP config for sale module""",
 
     'description': """
-        Move chatter to bottom
+        EQP check and config for sale module
     """,
 
     'author': "haxs",
@@ -16,19 +16,13 @@
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '16.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['web'],
+    'depends': ['sale','sale_stock', 'haxs_security_groups'],
 
     # always loaded
     'data': [
-        # 'views/assets.xml',
-    ],
-
-    'assets': {
-        'web.assets_backend': [
-            'haxs_chatter_position/static/src/scss/chatter_position.scss',
-        ],
-    }
+        'views/sale_order_change.xml',
+    ]
 }
