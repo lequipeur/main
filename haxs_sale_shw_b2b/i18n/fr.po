@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haxs_sale_shw_b2b
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20221202\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-16 18:12+0000\n"
+"PO-Revision-Date: 2022-12-16 18:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields.selection,name:haxs_sale_shw_b2b.selection__sale_order__sale_type__btob
+#: model:ir.model.fields.selection,name:haxs_sale_shw_b2b.selection__sale_report__sale_type__btob
+#: model_terms:ir.ui.view,arch_db:haxs_sale_shw_b2b.dialog_selection_wizard_form_view_wizard
+msgid "BtoB"
+msgstr ""
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model,name:haxs_sale_shw_b2b.model_sale_order
+msgid "Invoice field"
+msgstr ""
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_type_selection_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: haxs_sale_shw_b2b
+#: model_terms:ir.ui.view,arch_db:haxs_sale_shw_b2b.dialog_selection_wizard_form_view_wizard
+msgid "SHOWROOM"
+msgstr ""
+
+#. module: haxs_sale_shw_b2b
+#: model_terms:ir.ui.view,arch_db:haxs_sale_shw_b2b.sale_order_sale_type_search
+msgid "Sale Type"
+msgstr "Type de vente"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.actions.act_window,name:haxs_sale_shw_b2b.sale_type_selection_action
+msgid "Sale Type selection"
+msgstr "Sélection du type de vente"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_order__sale_type
+#: model:ir.model.fields,field_description:haxs_sale_shw_b2b.field_sale_report__sale_type
+msgid "Sale type"
+msgstr "Type de vente"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model,name:haxs_sale_shw_b2b.model_sale_type_selection_wizard
+msgid "Sale type selection"
+msgstr "Sélection du type de vente"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model,name:haxs_sale_shw_b2b.model_sale_report
+msgid "Sales Analysis Report"
+msgstr "Rapport d'analyse des ventes"
+
+#. module: haxs_sale_shw_b2b
+#: model:ir.model.fields.selection,name:haxs_sale_shw_b2b.selection__sale_order__sale_type__shw
+#: model:ir.model.fields.selection,name:haxs_sale_shw_b2b.selection__sale_report__sale_type__shw
+msgid "Showroom"
+msgstr ""

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="sale_order_sale_type_search" model="ir.ui.view">
+		<field name="name">sale.order.sale.type.search</field>
+		<field name="model">sale.report</field>
+		<field name="inherit_id" ref="sale.view_order_product_search" />
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//filter[@name='User']" position="before">
+					<filter name="sale_type_filter" string="Sale Type" context="{'group_by': 'sale_type'}"/>
+				</xpath>
+			</data>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="dialog_selection_wizard_form_view_wizard" model="ir.ui.view">
+            <field name="name">dialog.selection.wizard.form.view.wizard</field>
+            <field name="model">sale.type.selection.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <div class="d-flex justify-content-around">
+                        <button string="SHOWROOM" class="btn btn-primary col-5" type="object" name="saletype_selection" context="{'saleTypeValue': 'shw'}"/>
+                        <button string="BtoB" class="btn btn-warning col-5" type="object" name="saletype_selection" context="{'saleTypeValue': 'btob'}"/>
+                    </div>
+                    <footer/>
+                </form>
+            </field>
+        </record>
+
+        <record id="sale_type_selection_action" model="ir.actions.act_window">
+            <field name="name">Sale Type selection</field>
+            <field name="res_model">sale.type.selection.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
