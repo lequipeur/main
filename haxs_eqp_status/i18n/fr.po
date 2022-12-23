@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haxs_eqp_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20221202\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-23 18:45+0000\n"
+"PO-Revision-Date: 2022-12-23 18:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haxs_eqp_status
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_product__state__blocked
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_template__state__blocked
+msgid "End Of Life"
+msgstr "Fin De Vie"
+
+#. module: haxs_eqp_status
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_product__state__stock
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_template__state__stock
+msgid "In Stock"
+msgstr "En Stock"
+
+#. module: haxs_eqp_status
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_product__state__stock_shw
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_template__state__stock_shw
+msgid "In Stock Showroom"
+msgstr "En Stock Showroom"
+
+#. module: haxs_eqp_status
+#: model:ir.model,name:haxs_eqp_status.model_product_template
+msgid "Product"
+msgstr "Article"
+
+#. module: haxs_eqp_status
+#: model:ir.model,name:haxs_eqp_status.model_product_product
+msgid "Product Variant"
+msgstr "Variante d'article"
+
+#. module: haxs_eqp_status
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_product__state__pto
+#: model:ir.model.fields.selection,name:haxs_eqp_status.selection__product_template__state__pto
+msgid "Purchase To Order"
+msgstr "Sur Commande"
+
+#. module: haxs_eqp_status
+#: model:ir.model.fields,field_description:haxs_eqp_status.field_product_product__state
+#: model:ir.model.fields,field_description:haxs_eqp_status.field_product_template__state
+msgid "Status"
+msgstr "Barre d'états"
