@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_form_statusbar_view" model="ir.ui.view">
+            <field name="name">product.template.form.statusbar.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[1]/header[1]" position="inside">
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_product_form_statusbar_view" model="ir.ui.view">
+            <field name="name">product.product.form.statusbar.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[1]/header[1]" position="inside">
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
