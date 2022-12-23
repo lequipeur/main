@@ -4,7 +4,6 @@ _logger = logging.getLogger(__name__)
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
-    _description = 'Global discount'
     
     global_discount = fields.Float(string="Global Discount", default=0.0)
 

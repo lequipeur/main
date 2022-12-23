@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haxs_eqp_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20221202\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-23 16:48+0000\n"
+"PO-Revision-Date: 2022-12-23 16:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haxs_eqp_product
+#: model:ir.model.fields,field_description:haxs_eqp_product.field_product_product__supplier_id
+#: model:ir.model.fields,field_description:haxs_eqp_product.field_product_template__supplier_id
+#: model:ir.model.fields,field_description:haxs_eqp_product.field_sale_report__supplier_id
+msgid "Default Supplier"
+msgstr "Fournisseur"
+
+#. module: haxs_eqp_product
+#: model_terms:ir.ui.view,arch_db:haxs_eqp_product.product_normal_form_id_view
+msgid "Id product"
+msgstr "Id article"
+
+#. module: haxs_eqp_product
+#: model:ir.model,name:haxs_eqp_product.model_product_template
+msgid "Product"
+msgstr "Article"
+
+#. module: haxs_eqp_product
+#: model:ir.model,name:haxs_eqp_product.model_product_product
+msgid "Product Variant"
+msgstr "Variante d'article"
+
+#. module: haxs_eqp_product
+#: model:ir.model,name:haxs_eqp_product.model_sale_report
+msgid "Sales Analysis Report"
+msgstr "Rapport d'analyse des ventes"
+
+#. module: haxs_eqp_product
+#: model_terms:ir.ui.view,arch_db:haxs_eqp_product.sale_order_supplmier_search
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: haxs_eqp_product
+#. odoo-python
+#: code:addons/haxs_eqp_product/models/product_active.py:0
+#: code:addons/haxs_eqp_product/models/product_active.py:0
+#, python-format
+msgid "You are not authorized to archive a product"
+msgstr "Vous n'êtes pas autorisé à archiver un article."
+
+#. module: haxs_eqp_product
+#. odoo-python
+#: code:addons/haxs_eqp_product/models/product_active.py:0
+#: code:addons/haxs_eqp_product/models/product_active.py:0
+#, python-format
+msgid "You are not authorized to unarchive a product"
+msgstr "Vous n'êtes pas autorisé à désarchiver un article."

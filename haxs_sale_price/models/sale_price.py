@@ -5,7 +5,6 @@ _logger = logging.getLogger(__name__)
 
 class SalePriceProduct(models.Model):
     _inherit = 'product.template'
-    _description = 'Sale Price'
     
     @api.constrains("list_price")
     def _check_permission(self):

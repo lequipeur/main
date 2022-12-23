@@ -4,7 +4,6 @@ _logger = logging.getLogger(__name__)
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
-    _description = 'Invoice field'
     
     amount_already_invoiced = fields.Float(string="Already invoiced", default=0.0, compute="on_update", store=True)
     amount_to_invoice = fields.Float(string="To invoice", default=0.0, compute="on_update", store=True)

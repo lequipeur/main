@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="sale_order_supplmier_search" model="ir.ui.view">
+		<field name="name">sale.order.supplier.search</field>
+		<field name="model">sale.report</field>
+		<field name="inherit_id" ref="sale.view_order_product_search" />
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//filter[@name='User']" position="before">
+					<filter name="supplier_filter" string="Supplier" context="{'group_by': 'supplier_id'}"/>
+				</xpath>
+			</data>
+		</field>
+	</record>
+</odoo>

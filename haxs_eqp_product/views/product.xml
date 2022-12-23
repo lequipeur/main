@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_form_view_default_supplier" model="ir.ui.view">
+            <field name="name">product.template.form.view.default.supplier</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='detailed_type']" position="after">
+                    <field name="supplier_id" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_normal_form_id_view" model="ir.ui.view">
+            <field name="name">product.template.form.id.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="before">
+                    <field name="id" string="Id product" groups="haxs_security_groups.inventory_group_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
