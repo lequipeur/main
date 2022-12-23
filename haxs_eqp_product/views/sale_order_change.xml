@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_view_form_inherit_update" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit.update</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">haxs_security_groups.sales_group_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">haxs_security_groups.sales_group_manager</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="groups">haxs_security_groups.sales_group_manager</attribute>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='product_id']" position="attributes">
+                    <attribute name="options">{'no_create': True}</attribute>
+                    <attribute name="widget">many2one</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_template_id']" position="attributes">
+                    <attribute name="options">{'no_create': True}</attribute>
+                    <attribute name="widget">many2one</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sale_order_view_form_inherit_sale_stock_update" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit.sale.stock.update</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale_shipping']/field[@name='effective_date']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='sale_shipping']/label[@for='commitment_date']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[@name='sale_shipping']/div[hasclass('o_row')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='date_order']" position="after">
+                    <!--<field name="commitment_date" attrs="{'required':[['state','=','sale']]}"/>-->
+                    <field name="commitment_date" string="Delivery date" widget="date"/>
+                    <field name="expected_date" string="Expected date" widget="date" class="text-muted" attrs="{'invisible': [('effective_date', '!=', False), ('commitment_date', '!=', False)]}"/>
+                    <field name="effective_date" class="text-muted" widget="date" attrs="{'invisible': [('effective_date', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -5,7 +5,6 @@ _logger = logging.getLogger(__name__)
 
 class ExtraPriceProduct(models.Model):
     _inherit = 'product.product'
-    _description = 'Extra Price'
     
     extra_price = fields.Float(string="Extra price", default=0.0)
     
