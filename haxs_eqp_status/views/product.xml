@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[@name='options']" position="inside">
-                    <div>
+                    <div groups="haxs_security_groups.purchase_group_manager">
                         <field name="to_archive" attrs="{'readonly':False}"/>
                         <label for="to_archive"/>
                     </div>
