@@ -23,6 +23,7 @@
 
     # always loaded
     'data': [
+        'data/cron.xml',
         'views/product.xml',
     ]
 }

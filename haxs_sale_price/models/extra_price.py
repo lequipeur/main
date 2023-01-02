@@ -14,7 +14,7 @@ class ExtraPriceProduct(models.Model):
             product.price_extra = product.extra_price
     
     @api.constrains("price_extra", "extra_price")
-    def _check_permission(self):
+    def _check_permission_price_extra(self):
         # for the default value on create
         if self.env.context.get("disable_check", False):
             return True
