@@ -16,6 +16,11 @@ class ProductTemplate(models.Model):
 
     @api.constrains('to_archive')
     def _check_permission_to_archive(self):
+        test = {
+            "key1": 1,
+            "key2": 2
+        }
+        _logger.info(test.keys())
         # for the default value on create
         if self.env.context.get("disable_check", False):
             return True
